@@ -1,0 +1,17 @@
+<?php
+$a = 30;
+$b = 50;
+$c = $a;
+// echo "a value is ".$a . "<br>" . "b value is " .$b ."<br>";
+$a = $b;
+$b = $c;
+// echo "a value is " .$a ."<br>" . "b value is " .$b ."<br>";
+?>
+<?php
+$a = 30;
+$b = 50;
+echo "a value is ".$a . "<br>" . "b value is " .$b ."<br>";
+$a = $b;
+$b = $a;
+echo "a value is " .$a ."<br>" . "b value is " .$b;
+?> 
