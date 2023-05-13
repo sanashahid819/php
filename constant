@@ -1,0 +1,32 @@
+<?php
+//first method
+define ("pi",3.142);
+echo pi. "<br>";
+?>
+
+
+<?php
+// method 2
+const blood ="b+";
+echo blood. "<br>";
+?>
+
+<?php
+// function
+function cal($num1,$num2){
+    echo $num1+$num2;
+
+}
+cal(4,5);
+?>
+
+<?php
+
+$num1=45;
+$num2=5;
+function sum(){
+    global $num1,$num2;
+    echo ($num1 + $num2);
+}
+sum();
+
