@@ -1,0 +1,60 @@
+host
+user
+database
+password
+these thing use to connect database like mysql
+
+
+
+
+
+qurey for connection:
+
+
+<?php
+
+$server = "mysql:host=localhost;bdname=aptech";
+$user ="root";
+$passward="";
+
+$pdo = new PDO($server,$user,$passward);
+
+?>
+
+
+qurrey for include:
+
+<?php
+include ("connection.php")
+?>
+
+
+qurey to return data 
+<?php
+$qurey = $pdo->qurey(" select * from faculty");
+$result = $qurey->fetchAll(PDO::FETCH_ASSOC);
+foreach(result as faculty){
+       ?>
+<table>
+<tr>
+    <td><?php echo $faculty ['name']?></td> 
+      <td><?php echo $faculty ['name']?></td> 
+         <td><?php echo $faculty ['name']?></td> 
+          <td><?php echo $faculty ['name']?></td> 
+
+</tr>
+</table>
+
+<?php
+}
+
+?>
+
+
+
+
+curd operation name:
+   
+insect
+operate
+delect
