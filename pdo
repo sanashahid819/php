@@ -55,6 +55,7 @@ foreach(result as faculty){
 
 curd operation name:
    
-insect
-operate
+create
+update
 delect
+read
