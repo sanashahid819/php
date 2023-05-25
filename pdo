@@ -5,7 +5,7 @@ password
 these thing use to connect database like mysql
 
 
-
+PDO will work on 12 different database systems, whereas MySQLi will only work with MySQL databases.
 
 
 qurey for connection:
