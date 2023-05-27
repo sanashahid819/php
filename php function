@@ -1,0 +1,40 @@
+
+fetch and select data / display:
+
+<?php
+$query = $pdo->query("select * from data");
+$result = $query->fetchAll(PDO::FETCH_ASSOC);
+foreach($result as $faculty){
+       ?>
+
+<tr>
+    <td><?php echo $faculty['id']?></td> 
+    <td><?php echo $faculty['name']?></td> 
+    <td><?php echo $faculty['address']?></td> 
+    <td><?php echo $faculty['contact']?></td> 
+    
+
+ </td>
+ 
+
+insert function:
+
+<?php
+
+if(isset($_POST['ins'])){
+    $name = $_POST['name'];
+    $address = $_POST['address'];
+    $contact = $_POST['contact'];
+
+    $query = $pdo-> prepare("insert into data (name,address,contact)  values (:name ,:address,:contact)" );
+    $query->bindParam('name',$name);
+    $query->bindParam('address',$address);
+    $query->bindParam('contact',$contact);
+    $query->execute();
+    echo "data inserted!";
+
+
+}
+
+
+?>
