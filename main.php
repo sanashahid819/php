@@ -35,6 +35,9 @@ foreach($result as $faculty){
     <td><?php echo $faculty['b_id']?></td> 
     <td><?php echo $faculty['b_name']?></td> 
     <td><a type="submit" class="btn btn-primary" class="text-light" href="update.php?id=<?php echo $faculty['b_id'] ?>">update</a>
+      
+      <td><a type="submit" class="btn btn-danger" class="text-light" href="main.php?id=<?php echo $faculty['b_id'] ?>">delete</a>
+
 
  </td>
  
@@ -49,7 +52,16 @@ foreach($result as $faculty){
 <td><a type="submit" class="btn btn-primary"class="text-light" href="insert.php?id=<?php echo $faculty['b_id'] ?>"> insert</a>
 </td>
 </table>
+<?php
+    if(isset($_GET['id'])){
+        $f_id = $_GET ['id'];
+        $query=$pdo->prepare("delete from brand where b_id=:id");
+        $query->bindParam("id",$f_id);
+       $query->execute();
+      echo" data deleted successfully";
 
+    }
+    ?>
 </div>
 
 </body>
